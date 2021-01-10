@@ -2,7 +2,7 @@ import { Client } from 'discord.js';
 import { registerCommands } from './commands';
 import InitializeRoles from './utils/InitializeRoles';
 
-export const SERVER_GUILD = "Mido's house";
+export const SERVER_GUILD = 'Mido Async League';
 
 export default class Mido {
   private client: Client;

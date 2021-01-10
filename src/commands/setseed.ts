@@ -59,6 +59,7 @@ export default class Setseed extends Command {
     const raceCategory = guild?.channels.cache.find(c => c.name === 'races');
     const raceChannel = await guild?.channels.create(`race-${seedNumber}`, {
       type: 'text',
+      topic: `👀 See pined messages for race details\n🌐 ${seed}`,
     });
     const alertRole = guild?.roles.cache.find(
       role => role.name === 'mido-alert',
@@ -66,7 +67,7 @@ export default class Setseed extends Command {
 
     if (raceCategory && raceChannel) {
       raceChannel.setParent(raceCategory.id);
-      raceChannel.send(embed);
+      raceChannel.send(embed).then(message => message.pin());
       raceChannel.send(`<@&${alertRole?.id}>`);
       msg.channel
         .send(`New race available at <#${raceChannel.id}>!`)

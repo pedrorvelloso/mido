@@ -2,6 +2,7 @@ import { Client, Message } from 'discord.js';
 import Command from '../interfaces/Command';
 
 import AddRole from './addrole';
+import Forfeit from './forfeit';
 import JoinGame from './join';
 import Ping from './ping';
 import Setseed from './setseed';
@@ -13,6 +14,7 @@ const commands: Command[] = [
   new Setseed(),
   new AddRole(),
   new JoinGame(),
+  new Forfeit(),
 ];
 
 export function checkCommand(msg: string, aliases: string[]): boolean {
