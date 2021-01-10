@@ -1,0 +1,37 @@
+{
+  "name": "mido-bot",
+  "version": "0.0.1",
+  "description": "Ocarina Randomizer Leaderboard bot for Discord",
+  "main": "index.js",
+  "author": "Ilher",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "ts-node-dev --transpile-only --inspect --ignore-watch node_modules src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.10.3",
+    "@types/node": "^14.14.20",
+    "@types/validator": "^13.1.2",
+    "@types/ws": "^7.4.0",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "mongoose": "~5.10.3",
+    "validator": "^13.5.2"
+  }
+}
