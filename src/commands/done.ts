@@ -42,7 +42,6 @@ export default class Done extends Command {
     const correctTime = time.startsWith('0') ? time.slice(1) : time;
 
     return [correctTime];
-    return args;
   }
 
   async done(
