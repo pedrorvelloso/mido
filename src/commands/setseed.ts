@@ -42,7 +42,7 @@ export default class Setseed extends Command {
         },
         {
           title: 'Record your time',
-          text: `type m!record <your_time@0:00:00> in this channel to record your time`,
+          text: `type m!done <your_time@0:00:00> in this channel to record your time`,
         },
         {
           title: 'Finish this race',
@@ -53,8 +53,7 @@ export default class Setseed extends Command {
       thumbnail: 'oot',
       color: '#386dbb',
     });
-
-    // msg.delete({ timeout: 1000 });
+    msg.delete({ timeout: 1000 });
 
     const raceCategory = guild?.channels.cache.find(c => c.name === 'races');
     const raceChannel = await guild?.channels.create(`race-${seedNumber}`, {
