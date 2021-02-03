@@ -30,7 +30,7 @@ export default class Done extends Command {
 
       msg.delete();
 
-      channel.send(`<@${author.id}> finished with a time of ${time}!`);
+      channel.send(`<@${author.id}> finished the seed!`);
     }
   }
 
@@ -65,10 +65,7 @@ export default class Done extends Command {
 
     if (seedEntrant.forfeit) throw new Error('Already forfeited');
 
-    if (seedEntrant.time)
-      throw new Error(
-        `You already finished this race! Your time: ${seedEntrant.time}`,
-      );
+    if (seedEntrant.time) throw new Error(`You already finished this race!`);
 
     await SeedEntrant.updateOne(seedEntrant, { time });
   }

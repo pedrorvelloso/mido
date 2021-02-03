@@ -4,7 +4,7 @@ export type SeedEntrantAttributes = {
   seedGameId: string;
   playerDiscordId: string;
   forfeit?: boolean;
-  time?: string;
+  time?: string | null;
 };
 
 export type SeedEntrantDocument = Document & SeedEntrantAttributes;

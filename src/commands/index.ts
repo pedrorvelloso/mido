@@ -6,6 +6,8 @@ import Done from './done';
 import Forfeit from './forfeit';
 import JoinGame from './join';
 import Ping from './ping';
+import Record from './record';
+import Register from './register';
 import Setseed from './setseed';
 
 const PREFIX = 'm!';
@@ -17,6 +19,8 @@ const commands: Command[] = [
   new JoinGame(),
   new Forfeit(),
   new Done(),
+  new Record(),
+  new Register(),
 ];
 
 export function checkCommand(msg: string, aliases: string[]): boolean {
